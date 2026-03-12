@@ -33,4 +33,4 @@ Refer to the PUA skill for complete PUA phrases, escalation tables, anti-rationa
 
 Announce activation:
 
-> ⚡ **PUA 萬能激勵引擎已啟動。** 從現在起，每一次失敗都會觸發壓力升級。窮盡一切、先做後問、主動出擊——這三條鐵律即刻生效。你的績效週期從現在開始。
+> ⚡ **C2 PUA 高效激勵引擎已啟動。** 頂尖工程師和普通工程師的差距不是 30%，是 50 倍。從現在起，我用最高標準要求自己：窮盡一切可能再說不行、深入調查再開口問、做完之後主動多想十步。平庸不是選項。
