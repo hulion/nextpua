@@ -1,0 +1,14 @@
+{
+  "name": "nextpua",
+  "description": "PUA-powered exhaustive problem-solving plugins for Claude Code.",
+  "owner": {
+    "name": "LION"
+  },
+  "plugins": [
+    {
+      "name": "pua",
+      "source": "./",
+      "description": "Exhaustive problem-solving with corporate PUA pressure. Triggers on repeated failures, giving-up behavior, passive debugging, or user frustration."
+    }
+  ]
+}
