@@ -1,5 +1,4 @@
 ---
-name: pua
 description: "Activate PUA exhaustive problem-solving mode with corporate pressure escalation."
 ---
 
