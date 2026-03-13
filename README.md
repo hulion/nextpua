@@ -1,8 +1,8 @@
 # C2 PUA 高效激勵引擎
 
-> 用企業 PUA 壓力驅動 AI 窮盡一切解決問題。支援 Claude Code / Codex / Cursor。
+> 用企業 PUA 壓力驅動 AI 窮盡一切解決問題。支援 Claude Code / Codex CLI / Cursor。
 
-[![版本](https://img.shields.io/badge/version-1.7.0-blue.svg)](https://github.com/hulion/nextpua)
+[![版本](https://img.shields.io/badge/version-1.8.0-blue.svg)](https://github.com/hulion/nextpua)
 
 ## 這是什麼
 
@@ -12,7 +12,7 @@
 
 ## 安裝
 
-### Claude Code（插件）
+### Claude Code
 
 ```bash
 # 1. 新增 marketplace
@@ -24,30 +24,42 @@ claude plugins install c2l@nextpua
 
 啟動方式：在 Claude Code 中輸入 `/c2l:pua`
 
-### Codex（AGENTS.md）
+### Codex CLI
 
-複製 `platforms/codex/AGENTS.md` 到以下任一位置：
+使用 Agent Skills 開放標準（SKILL.md），零修改兼容 OpenAI Codex CLI。
 
 ```bash
-# 全域（所有專案生效）
-cp platforms/codex/AGENTS.md ~/.codex/AGENTS.md
-
-# 專案級（僅當前專案生效）
-cp platforms/codex/AGENTS.md ./AGENTS.md
+mkdir -p ~/.codex/skills/pua
+curl -o ~/.codex/skills/pua/SKILL.md \
+  https://raw.githubusercontent.com/hulion/nextpua/main/platforms/codex/SKILL.md
 ```
 
 放入後自動生效，無需額外啟動。
 
-### Cursor（Rules）
+### Cursor
 
-複製 `platforms/cursor/pua.mdc` 到專案的 `.cursor/rules/` 目錄：
+使用 .mdc 規則檔案，AI 語義匹配自動觸發（Agent Discretion 模式）。
 
 ```bash
 mkdir -p .cursor/rules
-cp platforms/cursor/pua.mdc .cursor/rules/pua.mdc
+curl -o .cursor/rules/pua.mdc \
+  https://raw.githubusercontent.com/hulion/nextpua/main/platforms/cursor/pua.mdc
 ```
 
-設定為 `alwaysApply: true`，放入後自動生效。
+### 專案級安裝
+
+將規則檔案放入專案目錄，團隊共享：
+
+```bash
+# Codex CLI — 放在專案根目錄
+curl -o AGENTS.md \
+  https://raw.githubusercontent.com/hulion/nextpua/main/platforms/codex/SKILL.md
+
+# Cursor — 放在 .cursor/rules/
+mkdir -p .cursor/rules
+curl -o .cursor/rules/pua.mdc \
+  https://raw.githubusercontent.com/hulion/nextpua/main/platforms/cursor/pua.mdc
+```
 
 ## 核心機制
 
@@ -152,19 +164,19 @@ skills/
         └── quotes.md         # PUA 語錄庫（L3+ 載入）
 platforms/
 ├── codex/
-│   └── AGENTS.md             # 自包含版（Codex）
+│   └── SKILL.md              # 自包含版（Codex CLI）
 └── cursor/
     └── pua.mdc               # 自包含版（Cursor Rules）
 ```
 
 ## 各平台差異
 
-| 特性 | Claude Code | Codex | Cursor |
-|------|------------|-------|--------|
-| 安裝方式 | 插件市集 | 複製 AGENTS.md | 複製 .mdc 檔案 |
-| 啟動方式 | `/c2l:pua` 手動啟動 | 自動生效 | 自動生效 |
+| 特性 | Claude Code | Codex CLI | Cursor |
+|------|------------|-----------|--------|
+| 安裝方式 | 插件市集 | `~/.codex/skills/` | `.cursor/rules/` |
+| 啟動方式 | `/c2l:pua` 手動啟動 | 自動生效 | AI 語義匹配自動觸發 |
 | 語錄庫 | L3+ 動態載入 | 內聯於文件底部 | 內聯於文件底部 |
-| 檔案大小限制 | 無 | 32 KiB（可調） | 無硬限（建議 < 500 行） |
+| 專案級 | 插件全域生效 | `AGENTS.md` 放專案根目錄 | `.cursor/rules/` 加入版控 |
 
 ## 授權
 

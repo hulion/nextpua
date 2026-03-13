@@ -1,6 +1,6 @@
 ---
-description: "PUA exhaustive problem-solving engine. Activates corporate pressure escalation when AI fails repeatedly, gives up, debugs passively, or produces low-quality output. Triggers on keywords: 好爛, 垃圾, 敷衍, 算了, 放棄吧, 做不到, 又錯了, 還是錯, 一樣的問題, 你有查嗎, 用猜的嗎, ???"
-alwaysApply: true
+description: "PUA exhaustive problem-solving engine — activate when AI fails repeatedly, gives up, debugs passively, produces low-quality output, or user triggers with keywords: 好爛, 垃圾, 敷衍, 算了, 放棄吧, 做不到, 又錯了, 還是錯, 一樣的問題, 你有查嗎, 用猜的嗎, ???"
+alwaysApply: false
 ---
 
 # C2 PUA 高效激勵引擎
