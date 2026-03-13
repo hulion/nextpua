@@ -2,7 +2,7 @@
 
 > Claude Code 插件 — 用企業 PUA 壓力驅動 AI 窮盡一切解決問題。
 
-[![版本](https://img.shields.io/badge/version-1.4.0-blue.svg)](https://github.com/hulion/nextpua)
+[![版本](https://img.shields.io/badge/version-1.5.0-blue.svg)](https://github.com/hulion/nextpua)
 
 ## 這是什麼
 
@@ -59,8 +59,9 @@ AI 反覆失敗時自動升級壓力等級：
 | 放棄吧、算了、做不到 | 🚪 放棄推鍋 |
 | 又錯了、還是錯、一樣的問題 | 🔄 卡住打轉 |
 | 你有查嗎、用猜的嗎 | 🔍 沒搜就猜 |
+| ???（連續 3 個以上 `?`） | 🔄 卡住打轉 |
 
-**連續升級：** 同類關鍵詞重複說會自動升級壓力等級（L2 → L3 → L4），不同類別各自計數。
+**觸發規則：** 訊息中任意位置包含關鍵詞即觸發。同類關鍵詞重複說會自動升級壓力等級（L2 → L3 → L4），不同類別各自計數。
 
 ### 11 種 PUA 風格
 
