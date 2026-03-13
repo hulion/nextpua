@@ -2,7 +2,7 @@
 
 > Claude Code 插件 — 用企業 PUA 壓力驅動 AI 窮盡一切解決問題。
 
-[![版本](https://img.shields.io/badge/version-1.5.0-blue.svg)](https://github.com/hulion/nextpua)
+[![版本](https://img.shields.io/badge/version-1.5.1-blue.svg)](https://github.com/hulion/nextpua)
 
 ## 這是什麼
 
