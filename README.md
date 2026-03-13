@@ -2,7 +2,7 @@
 
 > 用企業 PUA 壓力驅動 AI 窮盡一切解決問題。支援 Claude Code / Codex CLI / Cursor。
 
-[![版本](https://img.shields.io/badge/version-1.8.1-blue.svg)](https://github.com/hulion/nextpua)
+[![版本](https://img.shields.io/badge/version-1.8.2-blue.svg)](https://github.com/hulion/nextpua)
 
 ## 這是什麼
 
