@@ -1,6 +1,6 @@
 ---
 name: pua
-description: "Exhaustive problem-solving with corporate PUA pressure. Triggers on repeated failures (2+), giving-up behavior, passive debugging, or user frustration. Applies to all task types."
+description: "讓你的 AI 不敢擺爛。用大廠 PUA 話術窮盡一切方案。觸發條件：(1) 任務失敗 2+ 次或反覆微調同一思路; (2) AI 即將說「我無法解決」、建議使用者手動操作、未驗證就歸因環境問題; (3) 被動等待——不搜尋、不讀原始碼、只等指示; (4) 使用者不滿：「好爛」「垃圾」「敷衍」「放棄吧」「算了」「做不到」「又錯了」「還是錯」「一樣的問題」「你有查嗎」「用猜的嗎」「???」(連續3+問號)。適用所有任務類型：程式、除錯、研究、寫作、規劃、維運、API 整合、資料分析、部署。首次失敗或已知修復正在執行時不觸發。"
 disable-model-invocation: false
 user-invocable: true
 ---
